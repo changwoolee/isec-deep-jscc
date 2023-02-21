@@ -1,12 +1,12 @@
 # Deep Joint Source-Channel Coding with Iterative Source Error Correction
 
-An official Pytorch implementation of [Deep Joint Source-Channel Coding with Iterative Source Error Correction (AISTATS23)](https://github.com/changwoolee/isec-deep-jscc) 
+An official Pytorch implementation of [Deep Joint Source-Channel Coding with Iterative Source Error Correction (AISTATS23)](https://arxiv.org/abs/2302.09174) 
 
 ## Summary
 
 ![sample](visualization/sample.jpg) 
 
-Deep joint source-channel coding (Deep JSCC) transmits a source through a noisy channel using deep neural network encoders and decoders. In our [AISTATS paper](https://github.com/changwoolee/isec-deep-jscc), we introduce an *iterative source error correction (ISEC)* algorithm which corrects the source error in the *codeword (latent) space* of the Deep JSCC encoder and decoder.
+Deep joint source-channel coding (Deep JSCC) transmits a source through a noisy channel using deep neural network encoders and decoders. In our [AISTATS paper](https://arxiv.org/abs/2302.09174), we introduce an *iterative source error correction (ISEC)* algorithm which corrects the source error in the *codeword (latent) space* of the Deep JSCC encoder and decoder.
 This is achieved by maximizing the *modified maximum a posteriori (MAP)* probability, which comprises both the likelihood and the prior probability, using gradient ascent. 
 While obtaining the likelihood is simple, estimating the prior probability of the codeword space of Deep JSCC is highly challenging. 
 To address this, we use a *bias-free CNN denoiser* to predict the gradient of the log prior probability. 
